@@ -98,41 +98,6 @@ The **Support Vector Machine (SVM)** achieved the best performance and was selec
 * pip
 
 ---
-⚙️ Setup and Installation
-
-Follow these steps to run the project locally.
-
-1. Clone the Repository
-git clone https://github.com/DivyanshWatma29/Insurance-fraud-detection.git
-cd Insurance-fraud-detection
-2. Create a Virtual Environment (Recommended)
-
-Linux / Mac:
-
-python3 -m venv venv
-source venv/bin/activate
-
-Windows:
-
-python -m venv venv
-venv\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
-
-If the requirements file fails due to system packages, install the core libraries manually:
-
-pip install flask pandas numpy scikit-learn joblib matplotlib seaborn missingno
-4. Run the Flask Application
-python app.py
-5. Open the Application
-
-Open your browser and visit:
-
-http://127.0.0.1:5000
-
-Enter claim details to test the fraud detection model.
-
----
 
 ## 📂 Project Structure
 
