@@ -6,9 +6,9 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model, scaler, and column names
-model = joblib.load('best_model.joblib')
-scaler = joblib.load('scaler.joblib')
-model_columns = joblib.load('model_columns.joblib')
+model = joblib.load('models/best_model.joblib')
+scaler = joblib.load('models/scaler.joblib')
+model_columns = joblib.load('models/model_columns.joblib')
 
 # Identify ALL numerical columns the scaler expects (from the fitted scaler object)
 all_numeric_cols = scaler.feature_names_in_.tolist()
