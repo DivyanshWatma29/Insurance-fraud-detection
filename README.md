@@ -1,57 +1,170 @@
 # Insurance Fraud Detection System
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg) 
-![Flask](https://img.shields.io/badge/Framework-Flask-red.svg)
-![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-orange.svg)
+**Python | Flask | Scikit-Learn**
 
 ## 📝 Project Overview
-Insurance fraud is a significant challenge for the insurance industry, leading to substantial financial losses. This project implements an end-to-end Machine Learning solution to detect fraudulent insurance claims. By analyzing historical claim data and policy parameters, the system predicts whether a new claim is legitimate or potentially fraudulent.
+
+Insurance fraud causes billions of dollars in losses every year. Detecting fraudulent claims early can significantly reduce financial risk for insurance companies.
+
+This project implements an **end-to-end Machine Learning pipeline** to detect fraudulent insurance claims. Using historical claim data and policy information, the system predicts whether a new claim is **legitimate or potentially fraudulent**.
+
+The trained model is integrated into a **Flask web application**, allowing users to input claim details and receive real-time fraud predictions.
+
+---
 
 ## 🚀 Project Workflow
-The project is structured into seven distinct Epics:
-- **Epic 1: Problem Understanding:** Defining business requirements and impact.
-- **Epic 2: Data Preparation:** Handling missing values, cleaning, and outlier treatment (IQR capping).
-- **Epic 3: Exploratory Data Analysis:** Visualizing correlations and data distributions.
-- **Epic 4: Model Building:** Training multiple classifiers (KNN, Decision Tree, Random Forest, Logistic Regression, Naïve Bayes, SVM).
-- **Epic 5: Performance Evaluation:** Comparing models using accuracy, confusion matrices, and cross-validation.
-- **Epic 6: Model Deployment:** Saving the best-performing model (SVM) and integrating it with a Flask web framework.
-- **Epic 7: Documentation:** Comprehensive project reporting.
+
+The project is structured into the following stages:
+
+**1. Problem Understanding**
+Define the business problem and identify the impact of fraudulent claims.
+
+**2. Data Preparation**
+Handle missing values, clean the dataset, and treat outliers using **IQR capping**.
+
+**3. Exploratory Data Analysis (EDA)**
+Analyze feature distributions and correlations using visualizations.
+
+**4. Model Building**
+Train multiple classification models:
+
+* K-Nearest Neighbors (KNN)
+* Decision Tree
+* Random Forest
+* Logistic Regression
+* Naïve Bayes
+* Support Vector Machine (SVM)
+
+**5. Performance Evaluation**
+Compare models using:
+
+* Accuracy
+* Confusion Matrix
+* Cross-validation scores
+
+**6. Model Deployment**
+Save the best-performing model (**SVM**) using **Joblib** and deploy it using a **Flask web application**.
+
+**7. Documentation**
+Document the methodology, results, and implementation.
+
+---
 
 ## 🛠️ Tech Stack
-- **Language:** Python
-- **Libraries:** Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib, Missingno
-- **Web Framework:** Flask (HTML/CSS for Frontend)
-- **Model Serialization:** Joblib
+
+**Language**
+
+* Python
+
+**Libraries**
+
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Missingno
+
+**Web Framework**
+
+* Flask (with HTML/CSS frontend)
+
+**Model Serialization**
+
+* Joblib
+
+---
 
 ## 📊 Model Performance
-After extensive testing and cross-validation, the models achieved the following mean accuracies:
 
-| Model | Mean Accuracy |
-| :--- | :--- |
-| **SVM (Best Model)** | **80.93%** |
-| Logistic Regression | 80.40% |
-| Random Forest | 77.47% |
-| KNN | 72.53% |
-| Decision Tree | 70.67% |
-| Naïve Bayes | 53.20% |
+| Model                | Mean Accuracy |
+| -------------------- | ------------- |
+| **SVM (Best Model)** | **80.93%**    |
+| Logistic Regression  | 80.40%        |
+| Random Forest        | 77.47%        |
+| KNN                  | 72.53%        |
+| Decision Tree        | 70.67%        |
+| Naïve Bayes          | 53.20%        |
+
+The **Support Vector Machine (SVM)** achieved the best performance and was selected for deployment.
+
+---
 
 ## 💻 Installation & Usage
 
 ### Prerequisites
-- Python 3.x
-- Pip (Python Package Index)
 
-### Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/insurance-fraud-detection.git
-   cd insurance-fraud-detection
-   ```
-2. Install dependencies:
-   ```bash
-   pip install pandas numpy scikit-learn flask joblib
-   ```
-3. Run the application:
-   ```bash
-   python app.py
+* Python 3.x
+* pip
 
+### 1. Clone the Repository
+
+Replace `<your-github-username>` with your actual GitHub username.
+
+```
+git clone https://github.com/<your-github-username>/insurance-fraud-detection.git
+cd insurance-fraud-detection
+```
+
+### 2. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 3. Run the Application
+
+```
+python app.py
+```
+
+### 4. Open the Web Interface
+
+Open your browser and go to:
+
+```
+http://127.0.0.1:5000
+```
+
+Enter claim details to get a **fraud prediction**.
+
+---
+
+## 📂 Project Structure
+
+```
+insurance-fraud-detection
+│
+├── app.py
+├── data
+│   └── insurance_claims.csv
+│
+├── models
+│   ├── best_model.joblib
+│   ├── scaler.joblib
+│   └── model_columns.joblib
+│
+├── notebooks
+│   └── Insurance_Fraud_Detection.ipynb
+│
+├── templates
+│   └── index.html
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 📌 Future Improvements
+
+* Deploy the application on **Docker / cloud platforms**
+* Add **model explainability (SHAP or LIME)**
+* Implement **API endpoints for external integration**
+* Improve UI with **React or Bootstrap**
+
+---
+
+## 👤 Author
+
+Divyansh
