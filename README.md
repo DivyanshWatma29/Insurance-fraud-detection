@@ -54,17 +54,4 @@ After extensive testing and cross-validation, the models achieved the following 
 3. Run the application:
    ```bash
    python app.py
-   ```
-4. Access the web interface at `http://127.0.0.1:5000`.
 
-## 📂 Project Structure
-```text
-├── app.py                # Flask Server Script
-├── best_model.joblib     # Trained SVM Model
-├── scaler.joblib         # Fitted StandardScaler
-├── model_columns.joblib  # Feature list for prediction
-├── templates/
-│   └── index.html        # Web UI
-├── Insurance_Fraud.ipynb # Full Data Analysis Notebook
-└── README.md             # Project Documentation
-```
