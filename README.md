@@ -97,37 +97,6 @@ The **Support Vector Machine (SVM)** achieved the best performance and was selec
 * Python 3.x
 * pip
 
-### 1. Clone the Repository
-
-Replace `<your-github-username>` with your actual GitHub username.
-
-```
-git clone https://github.com/<your-github-username>/insurance-fraud-detection.git
-cd insurance-fraud-detection
-```
-
-### 2. Install Dependencies
-
-```
-pip install -r requirements.txt
-```
-
-### 3. Run the Application
-
-```
-python app.py
-```
-
-### 4. Open the Web Interface
-
-Open your browser and go to:
-
-```
-http://127.0.0.1:5000
-```
-
-Enter claim details to get a **fraud prediction**.
-
 ---
 
 ## 📂 Project Structure
